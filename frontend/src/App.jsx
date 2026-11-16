@@ -13,7 +13,7 @@ import tokenTrace from './assets/token-trace.svg';
 import transactionBeacon from './assets/transaction-beacon.svg';
 import riskConstellation from './assets/risk-constellation.svg';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000').replace(/\/+$/, '');
 
 const LOADING_STEPS = [
   'Collecting blockchain activity (Alchemy)...',
